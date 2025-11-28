@@ -31,7 +31,7 @@ Frontend ↔ Backend communication via REST API
 Single entry point for users via Nginx on port 80
 
 ## 3. Local Development (without Docker)
-# 3.1 Backend (Express + MongoDB)
+### 3.1 Backend (Express + MongoDB)
 ```
 cd backend
 npm install
@@ -43,7 +43,7 @@ node server.js
 Backend runs on:
 ``` http://localhost:8080/api/tutorials ```
 
-# 3.2 Frontend (Angular 15)
+#### 3.2 Frontend (Angular 15)
 ```
 cd frontend
 npm install
@@ -69,7 +69,7 @@ Docker Compose runs 4 services:
 
   /api/ → Express backend
 
-# 4.1 Key Files
+### 4.1 Key Files
 backend/app/config/db.config.js
 ```
 module.exports = {
@@ -86,7 +86,7 @@ docker ps
 App will be available at:
 ```http://<VM_IP>/```
 
-6. AWS EC2 Deployment (Manual Steps)
+## 6. AWS EC2 Deployment (Manual Steps)
 
 High-level steps I followed to deploy on AWS Free Tier EC2:
 
@@ -127,7 +127,7 @@ docker ps
 Access app in browser:
 ``` http://<EC2_PUBLIC_IP>/```
 
-7. CI Pipeline (GitHub Actions)
+## 7. CI Pipeline (GitHub Actions)
 
 Location: .github/workflows/ci-cd.yml
 
@@ -161,7 +161,7 @@ SSH_USER – ubuntu
 
 SSH_PRIVATE_KEY – contents of the EC2 .pem key
 
-## 9. Known Issue :
+## 8. Known Issue :
 
 The GitHub Actions SSH deploy step to EC2 is partially configured and currently flaky due to SSH connectivity/permissions on the t2.micro instance. For now, I am using:
 ```
