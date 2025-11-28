@@ -46,8 +46,14 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script_stop: true
           script: |
+            echo "Connected to:"
+            hostname
+            echo "Current directory:"
+            pwd
             cd ~/devOps-task
             git pull origin main
             sudo docker-compose pull
             sudo docker-compose up -d --remove-orphans
+
