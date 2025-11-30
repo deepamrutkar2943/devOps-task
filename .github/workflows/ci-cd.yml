@@ -45,7 +45,35 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: |
+            -----BEGIN RSA PRIVATE KEY-----
+            MIIEowIBAAKCAQEA2zEpBI5WyFFuIldcl8eRi4CZeCbgGXYEwWAub4mq9NcEzs+H
+            I+RymkjTNB6lL+qXtpRW2+ZqdDekQgx7RnZAZlrkNg+q4kpufpuAv/SSKLrQxevt
+            2wApQdxNXP2uTDgiKox1Sp/+EmD7/NjWFN8OXQH9Bn8U/dDF7TNII8CKl9ro0Kja
+            dSjFplrhcrccwwzZIgw4tjExR5jHYzK52p/4+nJ3JAFyGx5BaQDBwXfiZ3bPM5rN
+            buegSEuaOywX3eeAqnmkfm24Se1cxL+3aRiaj47MPO0CGJYeO4WwuR6Nvv6XXLSh
+            ruRbMg6jrNW40izNfXsSt887XpHQ6YsmwFyb1wIDAQABAoIBAGXJxISLHR3VQtHL
+            xAHv+VTRGXPEidkJB1hNtAKz6aHdoCvyD43JbrbbDslrWcaQqHdvF47yx4jEthC9
+            /xlPnMRrfQLl77M6YWmGCRobFyy25HClCUXkI0Ska4C9hY17m9Iqe+V1uuUKCLr4
+            byIuG1txqvCzXyonI2Ltp5iCt1mgwID95684c6fWmxpvmVh+znb1uQVhGfLuaTJx
+            lEO/KLt84ym4ZmJEYY08y+ILZE0n07/J7oDi/etYO51UYzkyilYiuUT6mDnJtKYu
+            g8p9LgfpoXDOzffzXqhrJ/toYKpGGp88XjI1sJX11akMqww9bHVQGGhGzHtfeO16
+            /UkSaYECgYEA/B+NUv9sLyhAfCTV6uY76ZY/8WXSsvvdmP0LPZYtKHPabtbyycgj
+            5Xf/UjVOSEy5/QNwXJMiI24g45QJhj0k63tfzpM1Q3IIDYpfe+Bn9mtcUqrUv9SL
+            SpyAOGgi6W/AOYh6FnpAaLrPG0Yf712jqgFgnLmMS+pWnKUSpInUYyECgYEA3o/6
+            okiZQGfGwlylBQtmCE/a4Z/s6HvxljEJXaNJRhkpXQSaX8J57oJWzfPmqMC/rGOy
+            vZ3D2VxTzgHc7r+VFGVheWSrQ+azaG4l8Klv0RE03oYHyEYVXqaPTMGPuEX3rzEm
+            91uSCluangdNbmZiIugWYA1xWC10wQ22LSdpF/cCgYEAknrSZPI5LHy6WmYcUslI
+            7cF5jQqXi52Bda0upq1ltyb4NYV0sX8yO9On519JCABr3m/tDBv/rY4CVbZggjls
+            BdQ8KYylWXYa76MBLruGK0jc7rqJuJoIA2VBqYP3JKDkkYiVRhHo8e/2++WWED/b
+            Ip6CPwweUsznXUMavbXGS4ECgYApKMdZK8PrvUVsvGVoQWtlLh90inbtp75N4FOz
+            FXd/lzenFCrYesbB7SjQfcKygrLv1qA/oOWPVRvKhV2uaY/Qbc9Q++UQcaHMNlKd
+            5zfemigE3xShXRSmpHbr4wAJPCdKJvTl2fFwKPC3OPKA8D5F5lX8/X9wpzdoXHjM
+            cPVmkQKBgFSYUvmFRbN4FsaV+kjNKYkwATXXmNRC1vZpZliIS5d+MPlthIibrQZk
+            TC2EIamOiqfJqzufjNq6d+8/EggzUj0czRVG5DoYH3SevFDctJEmJ5bx5jxUu8VO
+            dVscOtJo18LQK7wnzDxgWYeV/sGh9i9CDnzp8iitNcnOuEVL1Pe0
+            -----END RSA PRIVATE KEY-----
           script_stop: true
           script: |
             echo "Connected to:"
