@@ -1,4 +1,5 @@
 # MEAN Tutorials CRUD – DevOps Task
+_(This repository is only for the demonstration purpose of CI/CD Pipeline by me.)_
 
 Full-stack **MEAN** application that manages tutorials (title, description, published).  
 This repo contains:
@@ -171,3 +172,8 @@ docker-compose up -d --remove-orphans
 
 ```
 directly on EC2 to deploy the latest images. In the next iteration, I plan to stabilize the SSH action so that the pipeline can fully auto-deploy to EC2 without any manual commands.
+
+##CI/CD Pipeline Status Update
+
+The CI/CD pipeline has been successfully implemented using GitHub Actions.
+Both backend and frontend Docker images are automatically built and pushed to Docker Hub on every commit to the main branch.
