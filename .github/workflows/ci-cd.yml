@@ -40,31 +40,14 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/mean-tutorials-frontend:latest
 # Original AWS EC2 steps
-      # - name: Deploy to EC2 via SSH
-      #   uses: appleboy/ssh-action@v1.2.0
-      #   with:
-      #     host: ${{ secrets.SSH_HOST }}
-      #     username: ${{ secrets.SSH_USER }}
-      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     script_stop: true
-      #     script: |
-      #       echo "Connected to:"
-      #       hostname
-      #       echo "Current directory:"
-      #       pwd
-      #       cd ~/devOps-task
-      #       git pull origin main
-      #       sudo docker-compose pull
-      #       sudo docker-compose up -d --remove-orphans
-
-      - name: Add SSH key to agent
-        uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
       - name: Deploy to EC2 via SSH
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script_stop: true
+          script: |
             echo "Connected to:"
             hostname
             echo "Current directory:"
@@ -73,6 +56,5 @@ jobs:
             git pull origin main
             sudo docker-compose pull
             sudo docker-compose up -d --remove-orphans
-          EOF
 
 
