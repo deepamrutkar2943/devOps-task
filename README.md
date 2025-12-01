@@ -1,6 +1,8 @@
 # MEAN Tutorials CRUD – DevOps Task
 _(This repository is only for the demonstration purpose of CI/CD Pipeline by me.)_
 
+[![CI/CD Pipeline](https://github.com/deepamrutkar2943/devOps-task/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/deepamrutkar2943/devOps-task/actions/workflows/ci-cd.yml)
+
 Full-stack **MEAN** application that manages tutorials (title, description, published).  
 This repo contains:
 
